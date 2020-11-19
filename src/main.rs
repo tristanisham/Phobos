@@ -60,7 +60,7 @@ fn main() -> std::io::Result<()> {
 
     // Code below is for me to have a direct header for my articles, if you don't want that, you can delete until the next comment
 
-    let full = format!(
+    /* let full = format!(
         "<!DOCTYPE html>\n
     <html lang=\"fr\">\n
     <head>\n
@@ -85,9 +85,9 @@ fn main() -> std::io::Result<()> {
     // End of personnal code
 
     let mut file = File::create("index.html")?;
-    file.write_all(full.as_bytes())?;
-
-    // file.write_all(content.as_bytes())?;
+    file.write_all(full.as_bytes())?;*/
+    let mut file = File::create("index.html")?;
+    file.write_all(content.as_bytes())?;
 
     Ok(())
 }
